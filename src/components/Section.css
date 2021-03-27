@@ -1,0 +1,125 @@
+.section {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.section__container {
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fade-in ease-in 0.5s 3s forwards;
+}
+
+.section__text {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  color: #393c41;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.section__text h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.section__desc {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.section__end {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 530px;
+}
+.section__expand {
+  color: black;
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-chevron-down {
+  font-size: 25px;
+  text-align: center;
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 7px, 0);
+  }
+}
+
+/* Prefix Support */
+.model .fa-chevron-down {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1, 1, 0.5);
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 7px, 0);
+    transform: translate3d(0, 7px, 0);
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+  .section__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+  }
+  /* .model__custom .custom,
+  .model__custom .existing {
+    width: 80vw;
+  } */
+}
