@@ -39,6 +39,8 @@
   text-decoration: none;
   color: #373838;
 }
+
+.header__link,
 .header__models > h3,
 .header__menu > h3 {
   font-size: 14px;
@@ -165,6 +167,7 @@
   justify-content: flex-start;
 }
 
+.header__linkMobile,
 .header__models-res1 h3,
 .header__link-more,
 .header__links-more {

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import './Header.css'
-import teslaLogo from '../images/tesla-logo-png-20.png'
+import './Header2.css'
+import teslaLogo from '../../images/tesla-logo-white.png'
+import { Link } from 'react-router-dom'
 
-function Header() {
+
+function Header2() {
     const [isActive, setIsActive] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
     const [showLess, setShowLess] = useState(false)
@@ -17,18 +19,22 @@ function Header() {
     return (
         <div className="header">
             <div className="header__container">
-                <div className="header__logo">
-                    <img src={`${teslaLogo}`} alt="logo" />
-                </div>
-                <div className="header__models">
+                <Link to="/" style={{textDecoration: 'none', color: '#373838'}}>
+                    <div className="header__logo">
+                        <img src={`${teslaLogo}`} alt="logo" />
+                    </div>
+                </Link>
+                <div className="header__models2">
                     <h3>MODEL S</h3>
-                    <h3>MODEL 3</h3>
+                    <Link className="header__link" to="/model-3" style={{textDecoration: 'none', color: 'white'}}>
+                        <h3>MODEL 3</h3>
+                    </Link>
                     <h3>MODEL X</h3>
                     <h3>MODEL Y</h3>
                     <h3>SOLAR ROOF</h3>
                     <h3>SOLAR PANELS</h3>
                 </div>
-                <div className="header__menu">
+                <div className="header__menu2">
                     <h3>SHOP</h3>
                     <h3>TELSA ACCOUNT</h3>
                 </div>
@@ -45,7 +51,7 @@ function Header() {
                     <div className="menu__name">TEXT DRIVE</div>
                     <div className="menu__name">FIND US</div>
                 </div>
-                <div onClick={toggleClass} className={`navbar__toggle ${isActive ? "is-active" : ""}`}>
+                <div onClick={toggleClass} className={`navbar__toggle2 ${isActive ? "is-active" : ""}`}>
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
@@ -53,7 +59,9 @@ function Header() {
                 {/* <!-- Responsive Views --> */}
             <div className={`header__models-res1 ${showMenu ? "show__menu" : ""}`}>
                 <h3>MODEL S</h3>
-                <h3>MODEL 3</h3>
+                <Link className="header__linkMobile" to="/model-3" style={{textDecoration: 'none', color: '#373838'}}>
+                    <h3>MODEL 3</h3>
+                </Link>
                 <h3>MODEL X</h3>
                 <h3>MODEL Y</h3>
                 <h3>SOLAR ROOF</h3>
@@ -76,7 +84,9 @@ function Header() {
             {/* <!-- Mobile View --> */}
             <div className={`menu__container-mobile ${showMenu ? "show__menu" : ""} `}>           
                 <div className="menu__name-more">MODEL S</div>
-                <div className="menu__name-more">MODEL 3</div>
+                <Link className="header__linkMobile" to="/model-3" style={{textDecoration: 'none', color: '#373838'}}>
+                    <h3>MODEL 3</h3>
+                </Link>
                 <div className="menu__name-more">MODEL X</div>
                 <div className="menu__name-more">MODEL Y</div>
                 <div className="menu__name-more">SOLAR ROOF</div>
@@ -95,4 +105,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header2
