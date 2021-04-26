@@ -1,9 +1,17 @@
 import React from 'react'
 import './Model3.css'
 import backgroundImg from '../../images/model-3/model-3-hero-desktop.jpg'
+import teslaLogo from '../../images/tesla-logo-png-20.png'
 import ModelBody from './ModelBody'
+import Performance from './Performance'
 
 const Model3 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
     return (
         <div className="model__box">
             <div className="model" style={{
@@ -47,7 +55,8 @@ const Model3 = () => {
                     </div>
                 </div>
             </div>
-            <ModelBody />
+            <ModelBody scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
+            <Performance scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
         </div>
     )
 }

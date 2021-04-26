@@ -1,18 +1,12 @@
 import React from 'react'
 import './ModelBody.css'
-import teslaLogo from '../../images/tesla-logo-png-20.png'
 import { Link } from 'react-router-dom'
 import { AddCircleOutline, ExpandLess } from '@material-ui/icons'
 import backgroundImg1 from '../../images/model-3/model_3_safety_hero.png'
 import backgroundImgMobile from '../../images/model-3/model-_3_safety_hero_mobile.png'
 
-const ModelBody = () => {
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
+const ModelBody = ({teslaLogo, scrollToTop}) => {
+    
     return (
         <div className="model__body">
             <div className="model__built">
