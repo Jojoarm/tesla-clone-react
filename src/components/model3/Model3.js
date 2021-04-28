@@ -4,6 +4,26 @@ import backgroundImg from '../../images/model-3/model-3-hero-desktop.jpg'
 import teslaLogo from '../../images/tesla-logo-png-20.png'
 import ModelBody from './ModelBody'
 import Performance from './Performance'
+import performanceImg from '../../images/model-3/lhd-performance-hero-desktop.jpg'
+import AllWhell from './AllWhell'
+import Range from './Range'
+
+const modelInfo = [
+    {
+        backgroundImg: performanceImg,
+        description: 'Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds',
+        descriptionMobile: '0-60 mph*',
+        description2: 'Improved handling and aerodynamics allow for a top speed of 162 mph',
+        descriptionMobile2: 'Top Speed',
+        description3: 'Dual Motor All-Wheel Drive instantly controls traction and torque, in all weather conditions',
+        descriptionMobile3: 'Dual Motor',
+        performanceTitle: 'Performance',
+        titleMore: 'Quickest Acceleration',
+        twoButtons: 'true',
+        performanceWriteup: 'Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and Performance Brakes and lowered suspension for total control, in all weather conditions. And a carbon fiber spoiler improves stability at high speeds, all allowing Model 3 to accelerate from 0-60 mph* in as little as 3.1 seconds.'
+    },
+    
+]
 
 const Model3 = () => {
     const scrollToTop = () => {
@@ -57,6 +77,8 @@ const Model3 = () => {
             </div>
             <ModelBody scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
             <Performance scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
+            <AllWhell scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
+            <Range scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
         </div>
     )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import './Performance.css'
-import backgroundImg from '../../images/model-3/lhd-performance-hero-desktop.jpg'
-import { AddCircleOutline, ExpandLess } from '@material-ui/icons'
+import backgroundImg from '../../images/model-3/lhd-awd-hero-desktop.jpg'
+import backgroundImgMobile from '../../images/model-3/lhd-awd-hero-mobile.jpg'
+import { AddCircleOutline, Cloud, ExpandLess } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 
-const Performance = ({teslaLogo, scrollToTop}) => {
+const AllWhell = ({teslaLogo, scrollToTop}) => {
     return (
         <div className="performance__container">
             <header>
@@ -22,53 +22,53 @@ const Performance = ({teslaLogo, scrollToTop}) => {
                     <div className="performance__details">
                         <div className="model__info">
                             <div className="model__speed">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <p>3.1s</p>
+                                {/* <i class="fas fa-tachometer-alt"></i> */}
+                                <p>2</p>
                             </div>
-                            <small className="model__description">Quickest acceleration—from zero to 60 mph* in as little as 3.1 seconds</small>
-                            <small className="model__description2">0-60 mph*</small>
+                            <small className="model__description">Independent motors digitally control torque to the front and rear wheels</small>
+                            <small className="model__description2">Independent Motors</small>
                         </div>
                         <div className="model__info">
-                            <p>162mph</p>
-                            <small className="model__description">Improved handling and aerodynamics allow for a top speed of 162 mph</small>
-                            <small className="model__description2">Top Speed</small>
+                            <p>10ms</p>
+                            <small className="model__description">Dual motors respond to changing conditions in as little as 10 milliseconds</small>
+                            <small className="model__description2">Torque Response</small>
                         </div>
                         <div className="model__info">
-                            <p>AWD</p>
-                             <small className="model__description">Dual Motor All-Wheel Drive instantly controls traction and torque, in all weather conditions</small>
-                             <small className="model__description2">Dual Motor</small>
+                            <p><Cloud /></p>
+                             <small className="model__description">Unparalleled traction and control, in all weather conditions</small>
+                             <small className="model__description2">All-Weather control</small>
                         </div>                 
                     </div>
             </div>
             <div className="performance__info">
                 <div className="performance__buttons">
                     <div className="performance__title">
-                        <p>Performance</p>
-                        <h2>Quickest Acceleration</h2>
+                        <p>All-Wheel Drive</p>
+                        <h2>Dual Motor</h2>
                     </div>
                     <div className="more__info">
-                        <AddCircleOutline className="plus__icon" />Learn More
+                        {/* <AddCircleOutline className="plus__icon" />Learn More */}
                         <div className='order__button'>
                             <a href="#">ORDER NOW</a>
                         </div>
                    </div>
                 </div>
                 <div className="performance__writeup">
-                    <p>Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and Performance Brakes and lowered suspension for total control, in all weather conditions. And a carbon fiber spoiler improves stability at high speeds, all allowing Model 3 to accelerate from 0-60 mph* in as little as 3.1 seconds.</p>
+                    <p>Tesla All-Wheel Drive has two independent motors for improved redundancy, each with only one moving part for minimal maintenance and maximum durability. Unlike traditional all-wheel drive systems, they digitally control torque to the front and rear wheels for far better handling and traction control.</p>
                 </div>
             </div>
             {/* Mobile View */}
             <div className="performance__info2">
                 <div className="performance__buttons2">
                     <div className="performance__title">
-                        <p>Performance</p>
-                        <h2>Quickest Acceleration</h2>
+                    <p>All-Wheel Drive</p>
+                        <h2>Dual Motor</h2>
                     </div>
                     <div className="performance__writeup2">
-                        <p>Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and Performance Brakes and lowered suspension for total control, in all weather conditions. And a carbon fiber spoiler improves stability at high speeds, all allowing Model 3 to accelerate from 0-60 mph* in as little as 3.1 seconds.</p>
+                    <p>Tesla All-Wheel Drive has two independent motors for improved redundancy, each with only one moving part for minimal maintenance and maximum durability. Unlike traditional all-wheel drive systems, they digitally control torque to the front and rear wheels for far better handling and traction control.</p>
                     </div>
                     <div className="more__info2">
-                        <AddCircleOutline className="plus__icon" />Learn More
+                        {/* <AddCircleOutline className="plus__icon" />Learn More */}
                         <div className='order__button'>
                             <a href="#">ORDER NOW</a>
                         </div>
@@ -79,4 +79,4 @@ const Performance = ({teslaLogo, scrollToTop}) => {
     )
 }
 
-export default Performance
+export default AllWhell

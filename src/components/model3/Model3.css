@@ -88,7 +88,7 @@
 }
 
 .model__info {
-  /* width: 40%; */
+  width: 40%;
   color: white;
   display: flex;
   flex-direction: column;
