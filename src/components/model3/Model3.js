@@ -7,6 +7,7 @@ import Performance from './Performance'
 import performanceImg from '../../images/model-3/lhd-performance-hero-desktop.jpg'
 import AllWhell from './AllWhell'
 import Range from './Range'
+import AutoPilot from './AutoPilot'
 
 const modelInfo = [
     {
@@ -79,6 +80,7 @@ const Model3 = () => {
             <Performance scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
             <AllWhell scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
             <Range scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
+            <AutoPilot scrollToTop={scrollToTop} teslaLogo={teslaLogo} />
         </div>
     )
 }

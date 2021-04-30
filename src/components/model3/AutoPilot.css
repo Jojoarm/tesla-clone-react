@@ -1,0 +1,156 @@
+.autopilot__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.autopilot__container header {
+  position: absolute;
+  z-index: 100;
+  background-color: transparent;
+  background: none;
+  top: 0;
+  color: #373838;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.autopilot__video {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 140px;
+  position: relative;
+}
+
+.autopilot__video video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.autopilot__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.autopilot__info .desktop__info {
+  width: 250px;
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.autopilot__info .mobile__info {
+  display: none;
+}
+
+.autopilot__info h3 {
+  font-size: 24px;
+}
+
+.sensor__number {
+  display: flex;
+  align-items: center;
+}
+.sensor__number span {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.sensor__number p {
+  width: 100px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.autopilot__content,
+.autopilot__content2 {
+  width: 100%;
+  height: 40vh;
+}
+
+.autopilot__content {
+  display: flex;
+  padding: 50px 140px;
+}
+
+.autopilot__content2 {
+  display: none;
+  padding: 20px 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .autopilot__video {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 5px 50px;
+    height: 65vh;
+  }
+
+  .autopilot__content,
+  .autopilot__content2 {
+    height: 35vh;
+  }
+  .autopilot__info {
+    align-items: center;
+    height: 100px;
+  }
+
+  .autopilot__info .desktop__info {
+    display: none;
+  }
+
+  .autopilot__info .mobile__info {
+    display: inline;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .sensor__number p {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .sensor__number {
+    flex-direction: column;
+  }
+
+  /* .sensor__number span {
+    margin-top: 20px;
+  } */
+}
+@media screen and (max-width: 640px) {
+  .autopilot__content {
+    display: none;
+  }
+  .autopilot__content2 {
+    display: flex;
+  }
+
+  .autopilot__content2 .performance__title,
+  .autopilot__content2 .performance__writeup2 {
+    padding-bottom: 20px;
+  }
+}
